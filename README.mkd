@@ -6,7 +6,7 @@ Approach:
 
 1. Using `mercatalog_multiple_hist.pl`, read in each chromosome 12 bases at a time, increment anonymous hash keyed by 12mer and its complement by 1 at the bin corresponding to the current position (IOW each hash key contains an anonymous array that is a histogram of that 12mer's distribution)
 
-2. Create a UMAP embedding of the set of dodecamers with >=100 occurrences (using n_neighbors=25, min_dist=0.2)
+2. Create a UMAP embedding of the set of dodecamers with >=100 occurrences (using n_neighbors=25, min_dist=0.2) (data in the .Rdat file shows sequence, histograms, and UMAP coordinates)
 
 3. Display the embedding as an interactive webpage using Shiny (living at http://ilas.carltonlab.org/shiny/dodeca)
 
