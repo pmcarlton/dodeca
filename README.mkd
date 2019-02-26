@@ -8,6 +8,6 @@ Approach:
 
 2. Create a UMAP embedding of the set of dodecamers with >=100 occurrences
 
-3. Display the embedding as an interactive webpage using Shiny
+3. Display the embedding as an interactive webpage using Shiny (living at ilas.carltonlab.org/shiny/dodeca)
 
 
