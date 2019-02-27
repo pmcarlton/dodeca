@@ -1,17 +1,13 @@
 library(ggplot2)
-#library(plotly)
-#library(Cairo)   # For nicer ggplot2 output when deployed on Linux
-
-
-
-#am1<-read.csv('dodecamers_amounts_umap.csv')
-#am<-data.frame(am1,row.names=1)
+library(viridis)
 
 load('dodeca_ge100_nn25_md0.2.Rdat')
 ui <- fluidPage(
+
 titlePanel(h3("Dodecamers in the C. elegans genome"), windowTitle="Dodecamers"),
 
-mainPanel("Select points to examine their distribution - Double-click on selected points to zoom in - Click outside selection to unselect - Double-click with no points selected to zoom out"),
+mainPanel("Select points to examine their distribution - Double-click on selected points to zoom in - Click outside selection to unselect - Double-click with no points selected to zoom out -- github.com/pmcarlton/dodeca"),
+
    fluidRow(
     column(width = 12, h4("Chromosomal distribution (sum of all selected 12-mers)"),
            plotOutput("plot2",height=400))) ,
@@ -47,8 +43,9 @@ server <- function(input, output) {
   
   output$plot1 <- renderPlot({
     ggplot(dx, aes(x=p1, y=p2, label=rownames(dx))) + 
-      geom_point() +
-      coord_cartesian(xlim = ranges$x, ylim = ranges$y, expand = TRUE)
+      geom_point(aes(color=log(rowSums(dx[,1:60])))) +
+      coord_cartesian(xlim = ranges$x, ylim = ranges$y, expand = TRUE) +
+      scale_color_viridis()
   })
   
   observeEvent(input$plot1_dblclick, {
