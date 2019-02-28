@@ -43,9 +43,9 @@ server <- function(input, output) {
   
   output$plot1 <- renderPlot({
     ggplot(dx, aes(x=p1, y=p2, label=rownames(dx))) + 
-      geom_point(aes(color=log(rowSums(dx[,1:60])))) +
+      geom_point(aes(color=log10(rowSums(dx[,1:60])))) +
       coord_cartesian(xlim = ranges$x, ylim = ranges$y, expand = TRUE) +
-      scale_color_viridis()
+      scale_color_viridis(name=expression(log[10](abundance)))
   })
   
   observeEvent(input$plot1_dblclick, {
