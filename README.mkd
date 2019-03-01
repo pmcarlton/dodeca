@@ -10,3 +10,4 @@ Approach:
 
 3. Display the embedding as an interactive webpage using Shiny, currently living at [ilas.carltonlab.org/shiny/dodeca](https://ilas.carltonlab.org/dodeca/dodeca) - warning, takes ~15 seconds to load and display anything)
 
+![screenshot of Shiny app](scr.png)
