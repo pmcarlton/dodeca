@@ -10,10 +10,11 @@ mainPanel("Select points to examine their distribution - Double-click on selecte
 
    fluidRow(
     column(width = 12, h4("Chromosomal distribution (sum of all selected 12-mers)"),
-           plotOutput("plot2",height=400))) ,
+           plotOutput("plot2"))) ,
+           #plotOutput("plot2",height=400))) ,
  fluidRow(
     column(width = 6,h4("UMAP embedding"),
-           plotOutput("plot1", height = 800,
+           plotOutput("plot1",# height = 800,
                       # Equivalent to: click = clickOpts(id = "plot_click")
                       click = "plot1_click",
                       dblclick = "plot1_dblclick",
