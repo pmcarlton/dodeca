@@ -8,6 +8,6 @@ Approach:
 
 2. Create a UMAP embedding of the set of all dodecamers that occur >=100 times in the genome (using n_neighbors=25, min_dist=0.2) (data in the .Rdat file shows sequence, histograms, and UMAP coordinates)
 
-3. Display the embedding as an interactive webpage using Shiny, currently living at [ilas.carltonlab.org/shiny/dodeca](https://ilas.carltonlab.org/dodeca/dodeca) - warning, takes ~15 seconds to load and display anything)
+3. Display the embedding as an interactive webpage using Shiny, currently living at [ilas.carltonlab.org/shiny/dodeca/](https://ilas.carltonlab.org/dodeca/dodeca) - warning, takes ~15 seconds to load and display anything)
 
 ![screenshot of Shiny app](scr.png)
