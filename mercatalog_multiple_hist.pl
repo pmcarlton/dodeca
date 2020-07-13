@@ -9,8 +9,8 @@
 use strict;
 use warnings;
 
-my $bins=10;
-my $n=12; # mer length
+my $bins=20;
+my $n=6; # mer length
 my %catalog;
 
 my $seqs=($#ARGV); #number of sequences to read in, provided on command line
@@ -41,7 +41,6 @@ $offset+=$bins; # add to the offset for each new sequence
 
 } # end $fname
 
-print("mer ");
 for (my $li=0; $li<=$#ARGV; $li++) {
     for (my $lj=0; $lj<$bins; $lj++) {
         print $ARGV[$li],"_",$lj," ";
